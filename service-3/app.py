@@ -1,13 +1,13 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import random
 
 app = Flask(__name__)
 
+shots = ["Pull", "Hook", "Ramp", "Sweep", "Drive", "Cut", "Switch Hit"]
+
 @app.route('/get_shot', methods=['GET'])
 def get_shot():
-    shots = ['Pull', 'Hook', 'Ramp', 'Sweep', 'Drive', 'Cut', 'Switch Hit']
-    return random.choice(shots)
-
+    return jsonify({"shot": random.choice(shots)})
 
 
 if __name__ == "__main__":

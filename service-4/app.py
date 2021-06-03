@@ -1,13 +1,22 @@
-from flask import Flask, request
-import random
+from random import randrange
+from flask import Flask, request, jsonify
+
 
 app = Flask(__name__)
 
 @app.route('/get_score', methods=['POST'])
 def get_score():
-    score = str(len(request.data.decode('utf-8')))
-    score_amount = ['1','2','3','4','5','6']
-    return f"{score} scored {random.choice(score_amount)}"
+    name = request.json["name"]
+    shot = request.json["shot"]
+    score = 0
+    if len(name)>5:
+        score+=2
+    if shot in ["Pull", "Hook", "Ramp", "Sweep"]:
+        score+=4
+    else:
+        score+=1
+    return jsonify(score)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

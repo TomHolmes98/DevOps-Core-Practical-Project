@@ -1,23 +1,23 @@
-version: '3.8'
-services:
-  frontend:
-    container_name: 'service-1'
-    image: twjho/service-1_api
-    build: ./service-1
-    environment: 
-      DATABASE_URI: sqlite:///data.db
-    ports:
-    - published: 5000
-      target: 5000
-  backend-country:
-    container_name: 'service-2_api'
-    image: twjho/service-2_api
-    build: ./service-2   
-  backend-numbers:
-    container_name: 'service-3_api'
-    image: twjho/service-3_api
-    build: ./service-3      
-  backend:
-    container_name: 'service-4_api'
-    image: twjho/service-4_api
-    build: ./service-4
+version: '3.3'
+services: 
+    server:
+        container_name: project_server 
+        image: tomholmes98/project_server
+        build: ./server
+        environment:
+            DATABASE_URI: sqlite:///flask.db
+        ports:
+        - published: 5000
+          target: 5000
+    server-2:
+        container_name: project_service_2 
+        image: tomholmes98/project_service_2 
+        build: ./service-2 
+    server-3:
+        container_name: project_service_3 
+        image: tomholmes98/project_service_3 
+        build: ./service-3
+    server-4:
+        container_name: project_service_4
+        image: tomholmes98/project_service_4
+        build: ./service-4 

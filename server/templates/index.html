@@ -15,7 +15,8 @@
             The last five players and their scores
         </h2>
         <p>
-            {% for score in all_score %} 
+            {% for score in last_five %} 
+            {{ score.name }}:
             {{ score.score }}
             <br>
             {% endfor %}
