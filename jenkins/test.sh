@@ -11,5 +11,5 @@ pip3 install -r server/requirements.txt
 
 for service in server service-2 service-3 service-4
 do
-    python3 -m pytest --pyargs $service --cov-report term-missing --cov=app
+    python3 -m pytest
 done
