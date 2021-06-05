@@ -11,14 +11,14 @@ pipeline{
             stage('Run pytest'){
                 steps{
                     script{
-                            sh 'bash scripts/test.sh'
+                            sh 'bash jenkins/test.sh'
                             }
                         }
                     }
             stage('Push'){
                 steps{
                     script{
-                            sh 'bash scripts/push.sh'
+                            sh 'bash jenkins/push.sh'
                             }
                         }
                     }
