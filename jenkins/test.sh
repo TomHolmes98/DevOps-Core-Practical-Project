@@ -10,5 +10,5 @@ pip install wheel
 
 for service in service-2 service-3 service-4 server
 do
-    python3 -m pytest
+    python3 -m pytest $service
 done
