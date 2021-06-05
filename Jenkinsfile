@@ -3,9 +3,7 @@ pipeline{
         environment {
             app_version = 'v1'
             TEST_DATABASE_URI = credentials('TEST_DATABASE_URI')
-            TEST_SECRET = credentials('TEST_SECRET')
             DATABASE_URI = credentials('DATABASE_URI')
-            SECRET = credentials('SECRET')
             DOCKER_USERNAME = credentials('DOCKER_USERNAME')
             DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
             }
