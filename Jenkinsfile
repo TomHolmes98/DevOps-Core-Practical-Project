@@ -32,7 +32,7 @@ pipeline{
             stage('Install docker and set up swarm'){
                 steps{
                     script{
-                            sh 'ansible-playbook -i inventory.yaml playbook.yaml'
+                            sh 'ansible-playbook -i ./ansible/inventory.yaml ./ansible/playbook.yaml'
                             }
                         }
                     }
