@@ -8,9 +8,9 @@
 - hosts: manager
   become: true
   roles:
-  - docker_manager
+  - docker-manager
 
 - hosts: worker
   become: true
   roles:
-  - docker_worker
+  - docker-worker
