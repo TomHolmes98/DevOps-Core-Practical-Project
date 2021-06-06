@@ -22,19 +22,19 @@ pipeline{
                             }
                         }
                     }
-        //    stage('Ansible Configuration'){
-        //         steps{
-        //             script{
-        //                     sh 'bash scripts/ansible.sh'
-        //                     }
-        //                 }
-        //             }
-        //     stage('Install docker and set up swarm'){
-        //         steps{
-        //             script{
-        //                     sh 'ansible-playbook -i inventory.yaml playbook.yaml'
-        //                     }
-        //                 }
-        //             }
+          stage('Ansible Configuration'){
+                steps{
+                    script{
+                            sh 'bash jenkins/ansible.sh'
+                            }
+                        }
+                    }
+            stage('Install docker and set up swarm'){
+                steps{
+                    script{
+                            sh 'ansible-playbook -i inventory.yaml playbook.yaml'
+                            }
+                        }
+                    }
         }
 }
