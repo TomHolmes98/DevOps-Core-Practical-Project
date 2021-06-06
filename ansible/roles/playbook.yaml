@@ -14,11 +14,3 @@
   become: true
   roles:
   - docker-worker
-
-- hosts: manager
-  become: true
-  tasks:
-  - name: Copy docker-compose
-    copy:
-      src: docker-compose.yaml
-      dest: docker-compose.yaml
