@@ -33,6 +33,7 @@ pipeline{
                 steps{
                     script{
                             sh 'ansible-playbook -i ./ansible/roles/inventory.yaml ./ansible/roles/playbook.yaml'
+                            sh 'bash jenkins/deploy.sh'
                             }
                         }
                     }
