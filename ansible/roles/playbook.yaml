@@ -3,7 +3,7 @@
   - worker
   become: true
   roles:
-  - install_docker
+  - install-docker
 
 - hosts: manager
   become: true
