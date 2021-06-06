@@ -32,7 +32,8 @@ pipeline{
             stage('Install docker and set up swarm'){
                 steps{
                     script{
-                            sh 'ansible-playbook -i ./ansible/roles/inventory.yaml ./ansible/roles/playbook.yaml'
+                            sh 'ssh jenkins@35.197.225.140'
+                            //sh 'ansible-playbook -i ./ansible/roles/inventory.yaml ./ansible/roles/playbook.yaml'
                             }
                         }
                     }
