@@ -6,7 +6,7 @@ services:
         build: ./server
         deploy:
         environment:
-            DATABASE_URI: sqlite:///flask.db
+            DATABASE_URI: ${DATABASE_URI}
         ports:
         - published: 5000
           target: 5000
