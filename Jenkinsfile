@@ -42,5 +42,6 @@ pipeline{
                         junit '**/*.xml'
                         cobertura coberturaReportFile: 'coverage.xml', failNoReports: false
                     }
+                }
         }
 }
