@@ -1,0 +1,25 @@
+<html>
+    <header>
+        <title>
+            What Score Will They Get?
+        </title>
+    </header>
+    <body>
+        <h1>
+            What Score Will They Get?
+        </h1>
+        <p>
+            {{ name }} scored {{ score }} runs with a {{shot}}
+        </p>
+        <h2>
+            The last five players and their scores
+        </h2>
+        <p>
+            {% for score in last_five %} 
+            {{ score.name }}:
+            {{ score.score }}
+            <br>
+            {% endfor %}
+        </p>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+- hosts: 
+  - manager
+  - worker
+  become: true
+  roles:
+  - install-docker
+
+- hosts: manager
+  become: true
+  roles:
+  - docker-manager
+
+- hosts: worker
+  become: true
+  roles:
+  - docker-worker
