@@ -10,5 +10,5 @@ pip install wheel
 
 for service in service-2 service-3 service-4 server
 do
-    python3 -m pytest $service
+    python3 -m pytest $service --cov=$service --cov-report=xml --junitxml=junit/test-results.xml
 done
