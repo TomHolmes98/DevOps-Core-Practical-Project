@@ -4,6 +4,7 @@ services:
         container_name: project_server 
         image: tomholmes98/project_server
         build: ./server
+        deploy: 2
         environment:
             DATABASE_URI: ${DATABASE_URI}
         ports:
@@ -13,11 +14,14 @@ services:
         container_name: project_service_2 
         image: tomholmes98/project_service_2 
         build: ./service-2
+        deploy: 2
     server-3:
         container_name: project_service_3 
         image: tomholmes98/project_service_3 
         build: ./service-3
+        deploy: 2
     server-4:
         container_name: project_service_4
         image: tomholmes98/project_service_4
         build: ./service-4 
+        deploy: 2
