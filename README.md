@@ -41,6 +41,10 @@ The idea that I came up with was to create 4 services based on cricket that give
 
 A detailed risk assessment was carried out in order to monitor any potential risks that might have been encountered throughout the project. Below are 2 risk assessments, one from the beginning of the project and the second is one done towards the end of the project in order to assess how the risk assessment impacted the sprint.
 
+[![Image from Gyazo](https://i.gyazo.com/5f349f0fa6f71fb3b5abdfb9e61fff5c.png)](https://gyazo.com/5f349f0fa6f71fb3b5abdfb9e61fff5c)
+[![Image from Gyazo](https://i.gyazo.com/cc9b05d9183509d50c77ae77c2bce027.png)](https://gyazo.com/cc9b05d9183509d50c77ae77c2bce027)
+
+
 ### Trello Board
 
 A Trello board was used throughout the sprint as a means of project tracking, below are images taken at different stages throughout the sprint, the green colour on the majority of the boards represents the importance (MosCow Prioritisation) of the individual task.
