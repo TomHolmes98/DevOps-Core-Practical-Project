@@ -9,15 +9,15 @@ services:
         ports:
         - published: 5000
           target: 5000
-    server-2:
-        container_name: project_service_2 
+    service_2:
+        container_name: project_server_2 
         image: tomholmes98/project_service_2 
         build: ./service-2
-    server-3:
-        container_name: project_service_3 
+    service_3:
+        container_name: project_server_3 
         image: tomholmes98/project_service_3 
         build: ./service-3
-    server-4:
-        container_name: project_service_4
+    service_4:
+        container_name: project_server_4
         image: tomholmes98/project_service_4
         build: ./service-4 
